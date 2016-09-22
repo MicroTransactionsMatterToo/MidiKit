@@ -1,0 +1,15 @@
+MIDI:
+    device:
+        ports:
+            - IN
+            - OUT
+            - THRU
+    message:
+        signal:
+            - start [1]
+            - data [8]
+            - end [1]
+    specs:
+        speed: 31.25 Kb/sec
+        message-size: 10 bits
+        

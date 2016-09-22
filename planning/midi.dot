@@ -1,0 +1,3 @@
+digraph main {
+  "MIDI In" -> "MIDI Thru"
+}

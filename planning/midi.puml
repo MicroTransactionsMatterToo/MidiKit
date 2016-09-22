@@ -1,0 +1,22 @@
+@startuml
+class "MIDI Device" as midi {
+  ** Ports **
+  ..
+  # MIDI Thru
+  # MIDI Out
+  # MIDI In
+  --
+  ** Channels **
+  ..
+  + [1 - 16]
+  
+
+}
+
+class "MIDI Controller" as midicntrl {
+}
+
+
+midi -|> midicntrl : extends >
+
+@enduml

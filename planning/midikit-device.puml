@@ -1,0 +1,78 @@
+@startuml
+
+allow_mixing
+
+abstract "Capacitive Abstract" << input >> {
+  **States**
+  ..
+  + //bool//: active
+}
+
+interface "Pad 1" as pad1 {
+  **States**
+  ..
+  + //bool//: active
+}
+interface "Pad 2" as pad2 {
+  **States**
+  ..
+  + //bool//: active
+}
+interface "Pad 3" as pad3 {
+  **States**
+  ..
+  + //bool//: active
+}
+interface "Pad 4" as pad4 {
+  **States**
+  ..
+  + //bool//: active
+}
+
+pad1 <|- "Capacitive Abstract"
+pad2 <|- "Capacitive Abstract"
+pad3 <|- "Capacitive Abstract"
+pad4 <|- "Capacitive Abstract"
+
+pad1 --* mkitd
+pad2 --* mkitd
+pad3 --* mkitd
+pad4 --* mkitd
+
+class "Arduino Controller" as ardc {
+  **Digital Pins**
+  ..
+  + Pins [1-14]
+  + PWM Pins [3,5,6,9,10,11]
+  --
+  **Analog Pins**
+  ..
+  + A0
+  + A1
+  + A2
+  + A3
+  + A4
+  + A5
+  --
+  **Serial**
+  ..
+  - USB In
+
+}
+
+class "MIDI Kit Device" as mkitd {
+  **Inputs **
+  ..
+  + Pad 1 //[Capacitive]//
+  + Pad 2 //[Capacitive]//
+  + Pad 3 //[Capacitive]//
+  + Pad 4 //[Capacitive]//
+  --
+  **Outputs**
+  ..
+  # MIDI Out
+  + MIDI In
+  ~ MIDI Thru
+}
+
+@enduml

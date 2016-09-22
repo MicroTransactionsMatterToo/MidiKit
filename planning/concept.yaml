@@ -1,0 +1,4 @@
+needs:
+  - to provide a system to intelligently process midi messages
+  - DOES NOT need to implement the actions needed for each MIDI message
+  - Implement receiving and sending
