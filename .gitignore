@@ -112,3 +112,6 @@ Temporary Items
 # Documentation
 
 docs/*
+
+# cmake Toolchain
+cmake/*
