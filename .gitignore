@@ -118,3 +118,8 @@ cmake/*
 
 # Built binaries
 build/*
+
+
+# Misc GTest files
+gtest/googlemock/
+gtest/CMakeFiles/
