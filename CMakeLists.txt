@@ -3,6 +3,12 @@ project(midikit)
 
 set (CMAKE_CXX_STANDARD 11)
 
+#########
+# Tests #
+#########
+
+set (GTEST_ROOT "${CMAKE_SOURCE_DIR}/gtest/googletest")
+
 ############
 # Includes #
 ############
@@ -11,6 +17,7 @@ include_directories(
         /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino
         ${CMAKE_SOURCE_DIR}/src
         /usr/local/include/avr-libc
+        ${GTEST_ROOT}/include
 )
 
 
@@ -29,7 +36,7 @@ set (
         SOURCES
         src/common/midikit.cpp
         src/types/messages.cpp
-)
+        tests/test_test.cpp)
 
 set (
         HEADERS
