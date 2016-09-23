@@ -21,9 +21,11 @@ include_directories(
 )
 
 
+
 ################
 # Source Files #
 ################
+
 
 
 ##############
@@ -46,3 +48,9 @@ set (
 
 
 add_executable(midikit ${SOURCES} ${HEADERS})
+
+########
+# Libs #
+########
+
+target_link_libraries(midikit ${CMAKE_SOURCE_DIR}/gtest/googletest/libgtest.a)
