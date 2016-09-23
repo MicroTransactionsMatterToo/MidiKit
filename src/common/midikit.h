@@ -8,8 +8,9 @@
 #include <stdlib.h>
 #include <iostream>
 #include <array>
-#include <Arduino.h>
+//#include <Arduino.h>
 
+#include "types/messages.h"
 
 
 #endif //MIDIKIT_MIDIKIT_H
