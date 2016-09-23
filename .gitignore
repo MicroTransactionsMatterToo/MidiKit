@@ -115,3 +115,6 @@ docs/*
 
 # cmake Toolchain
 cmake/*
+
+# Built binaries
+build/*
